@@ -46,7 +46,7 @@ run().catch(console.dir);
 
 
 app.get('/', (req, res) => {
-    res.send('Express Exit Server is Running');
+    res.send('Express Exit Server Is Running');
 });
 
 app.listen(port, () => {
