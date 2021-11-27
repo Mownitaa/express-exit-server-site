@@ -44,6 +44,15 @@ async function run() {
             console.log(result);
             res.json(result);
         });
+
+
+        //DELETE 
+        app.delete('/services/:serviceId', async (req, res) => {
+            const serviceId = req.params.serviceId;
+            const query = { _id: ObjectId(serviceId) }
+            const result = await servicesCollection.deleteOne(query);
+            res.json(result);
+        })
     }
     finally {
         // await client.close();
