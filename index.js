@@ -73,6 +73,9 @@ app.get('/', (req, res) => {
     res.send('Express Exit Server Is Running');
 });
 
+app.get('/hello', (req,res)=>{
+    res.send('hello updated here')
+})
 
 app.listen(port, () => {
     console.log('Server running at port', port);
