@@ -82,3 +82,27 @@ app.listen(port, () => {
 })
 
 
+
+///////newwww
+module.exports=app
+//////
+
+
+
+
+
+// {
+//     "version": 2,
+//     "builds": [
+//         {
+//             "src": "./index.js",
+//             "use": "@vercel/node"
+//         }
+//     ],
+//     "routes":[
+//         {
+//             "src": "/(.*)",
+//             "dest": "/"
+//         }
+//     ]
+// }
