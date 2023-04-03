@@ -5,7 +5,7 @@ const ObjectId = require('mongodb').ObjectId;
 
 const cors = require('cors');
 const app = express();
-const port = process.env.PORT || 10000;
+const port = process.env.PORT || 5000;
 
 // middleware
 app.use(cors());
@@ -13,7 +13,7 @@ app.use(express.json());
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.6w1pi.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
-// console.log(uri)
+console.log(uri)
 
 // async function
 async function run() {
@@ -22,6 +22,8 @@ async function run() {
         const database = client.db('expressExit');
         const servicesCollection = database.collection('services');
 
+
+        console.log("all routes should work")
         // GET API
         app.get('/services', async (req, res) => {
             //
