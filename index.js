@@ -26,13 +26,6 @@ async function run() {
         console.log("all routes should work")
         // GET API
         app.get('/services', async (req, res) => {
-            //
-//             res.setHeader("Access-Control-Allow-Origin", "*")
-// res.setHeader("Access-Control-Allow-Credentials", "true");
-// res.setHeader("Access-Control-Max-Age", "1800");
-// res.setHeader("Access-Control-Allow-Headers", "content-type");
-// res.setHeader( "Access-Control-Allow-Methods", "PUT, POST, GET, DELETE, PATCH, OPTIONS" );
-//
             const cursor = servicesCollection.find({});
             const services = await cursor.toArray();
             res.send(services);
@@ -86,6 +79,6 @@ app.listen(port, () => {
 
 
 ///////
-// module.exports=app
+// https://express-exit-server-site-oxxyexek0-mownitaa.vercel.app/
 //////
 
